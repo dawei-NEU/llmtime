@@ -5,7 +5,7 @@ import pandas as pd
 
 def get_synthetic_datasets():
     dss = []
-    dir_path = os.path.dirname(os.path.realpath(__file__))
+    dir_path = os.path.dirname(os.path.realpath('__file__'))
     dss += glob(f'{dir_path}/../datasets/synthetic/*.npy')
     x = []
     labels = []

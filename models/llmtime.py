@@ -202,7 +202,7 @@ def get_llmtime_predictions_data(train, test, model, settings, num_samples=10, t
         test = [test]
 
     for i in range(len(train)):
-        if not isinstance(train[i], pd.Series):
+        if not isinstance(train[i], pd.Series): #if the train[i] is not a pd.Series
             train[i] = pd.Series(train[i], index=pd.RangeIndex(len(train[i])))
             test[i] = pd.Series(test[i], index=pd.RangeIndex(len(train[i]), len(test[i])+len(train[i])))
 
